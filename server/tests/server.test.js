@@ -101,8 +101,3 @@ describe('GET /todos/:id', () => {
 });
 
 
-
-/// DEPLOY IN HEROKU 
-// Command line:  heroku create
-//                heroku addons:create mongolab:sandbox
-//                heroku config

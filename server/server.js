@@ -52,9 +52,20 @@ app.get('/todos/:id', (req, res) => {
 });
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log(`Started on port ${port}`);
 });
 
 
 module.exports = {app};
+
+
+
+
+
+
+/// DEPLOY IN HEROKU 
+// Command line:  heroku create
+//                heroku addons:create mongolab:sandbox
+//                heroku config
+//                git push heroku master
