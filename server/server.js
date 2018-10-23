@@ -54,6 +54,7 @@ app.get('/todos/:id', (req, res) => {
   });
 });
 
+// DELETE /todos/:id
 app.delete('/todos/:id', (req, res) => {
   var id = req.params.id;
 
@@ -72,6 +73,7 @@ app.delete('/todos/:id', (req, res) => {
   });
 });
 
+// PATCH /todos/:id
 app.patch('/todos/:id', (req, res) => {
   var id = req.params.id;
   var body = _.pick(req.body, ['text', 'completed']);
@@ -98,6 +100,8 @@ app.patch('/todos/:id', (req, res) => {
   })
 });
 
+
+// POST /users
 app.post('/users', (req, res) => {
   var body = _.pick(req.body, ['email', 'password']);
   var user = new User(body);
@@ -111,6 +115,7 @@ app.post('/users', (req, res) => {
   })
 });
 
+// POST /users/me
 app.get('/users/me', authenticate, (req, res) => {
   res.send(req.user);
 });
